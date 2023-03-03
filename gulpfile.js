@@ -53,7 +53,7 @@ function watch() {
     });
     gulp.watch('scss/**/*.scss', { usePolling: true }, style);
     gulp.watch('pug/**/*.pug', { usePolling: true }, html);
-    gulp.watch('assets/images/*', { usePolling: true }, images);
+    gulp.watch('assets/images/**/*.*', { usePolling: true }, images);
     gulp.watch('assets/fonts/*', { usePolling: true }, copyFont);
     gulp.watch('pug/**/*.pug', { usePolling: true }).on('change', browserSync.reload);
     gulp.watch('styles/**/*.css', { usePolling: true }).on('change', browserSync.reload);
@@ -79,7 +79,7 @@ function js(){
 
 
 function images(){
-    return gulp.src('assets/images/*')
+    return gulp.src('assets/images/**/*.*')
     .pipe(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
