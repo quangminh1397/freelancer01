@@ -1,3 +1,15 @@
+mixin subMenuLink(href,src,figcap)
+  a(href=href)
+    figure 
+      img(src=src, alt=figcap)
+      figcaption&attributes(attributes)= figcap
+
+
+//- mixin subMenuLink(defaultClass)
+//-   ul(class=defaultClass)
+
++subMenuLink class1
++subMenuLink class2
 header.m-header
   .inner
     .m-header__top
@@ -33,69 +45,35 @@ header.m-header
             .m-header__subMenu
               ul.m-header__subMenu-01.menuSlider
                 li.item
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img01.jpg", alt="Phòng bếp")
-                      figcaption Phòng bếp
+                  +subMenuLink('#',path+"assets/images/menu_img01.jpg","Phòng bếp")
                 li.item
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img02.jpg", alt="Phòng bếp")
-                      figcaption Phòng bếp
+                  +subMenuLink('#',path+"assets/images/menu_img02.jpg","Phòng bếp")
                 li.item
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img03.jpg", alt="Phòng bếp")
-                      figcaption Phòng bếp
+                  +subMenuLink('#',path+"assets/images/menu_img03.jpg","Phòng bếp")
                 li.item
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img04.jpg", alt="Phòng bếp")
-                      figcaption Phòng bếp
+                  +subMenuLink('#',path+"assets/images/menu_img04.jpg","Phòng bếp")
           li
             span Giả Lập Không Gian
             .m-header__subMenu
               ul.m-header__subMenu-02
                 li
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img05.jpg", alt="Hình dung trực tuyến")
-                      figcaption Hình dung trực tuyến
+                  +subMenuLink('#',path+"assets/images/menu_img05.jpg","Hình dung trực tuyến")
                 li
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img06.jpg", alt="Nhà bếp 3D")
-                      figcaption Nhà bếp 3D
+                  +subMenuLink('#',path+"assets/images/menu_img06.jpg","Nhà bếp 3D")
                 li
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img07.jpg", alt="Bảng thiết kế")
-                      figcaption Bảng thiết kế
-
+                  +subMenuLink('#',path+"assets/images/menu_img07.jpg","Bảng thiết kế")
           li
             span Tin Tức
             .m-header__subMenu
               ul.m-header__subMenu-02
                 li
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img08.jpg", alt="Hình dung trực tuyến")
-                      figcaption Hình dung trực tuyến
+                  +subMenuLink('#',path+"assets/images/menu_img08.jpg","Hình dung trực tuyến")
                 li
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img09.jpg", alt="Nhà bếp 3D")
-                      figcaption Nhà bếp 3D
+                  +subMenuLink('#',path+"assets/images/menu_img09.jpg","Nhà bếp 3D")
                 li
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img10.jpg", alt="Bảng thiết kế")
-                      figcaption Bảng thiết kế
+                  +subMenuLink('#',path+"assets/images/menu_img10.jpg","Bảng thiết kế")
                 li
-                  a(href="#")
-                    figure
-                      img(src=path+"assets/images/menu_img11.jpg", alt="Bảng thiết kế")
-                      figcaption Bảng thiết kế
+                  +subMenuLink('#',path+"assets/images/menu_img11.jpg","Bảng thiết kế")
           li
             a(href="#") Cosentino City
           li
